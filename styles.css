@@ -188,14 +188,37 @@ body {
 
 
 
-.experience {
+.experience, .education-header {
     font-size: 2.5rem;
     color: var(--accent-color);
     padding: var(--section-padding);
     display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
 }
 
-.jobs, .education-list {
+
+.jobs li, .education-list li {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+    text-wrap: wrap;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+
+
+.education {
+    padding-bottom: 2%;
+}
+
+
+li {
     font-family: 'Comic Sans MS', sans-serif;
     font-size: 1.1rem;
 }
