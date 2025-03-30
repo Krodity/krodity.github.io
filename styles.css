@@ -266,4 +266,16 @@ li {
         width: 250px;
         height: 250px;
     }
+
+    .jobs li, .education-list li {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        align-items: center;
+        text-wrap: wrap;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    
+    }
 }
