@@ -186,6 +186,14 @@ body {
     background: rgba(75, 4, 168, 0.2);
 }
 
+
+
+.experience {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    
+}
+
 /* Media queries */
 @media (max-width: 768px) {
     #navbar {
