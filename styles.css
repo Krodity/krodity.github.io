@@ -195,6 +195,11 @@ body {
     display: block;
 }
 
+.jobs, .education-list {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 1.1rem;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
     #navbar {
