@@ -3,9 +3,14 @@
     src: url('misc/curive.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Lemonmilk';
+    src: url('misc/lemonmilk.ttf') format('truetype');
+}
+
 :root {
-    --font-primary: "Comic Sans MS", "Comic Sans", cursive;
-    --font-secondary: "Comic Sans MS", "Comic Sans", cursive;
+    --font-primary: 'Lemonmilk', sans-serif;
+    --font-secondary: 'Lemonmilk', sans-serif;
     --transition-speed: 0.3s;
     --primary-color: #1a1a1a;
     --text-color: #ffffff;
@@ -163,8 +168,6 @@ body {
 .skill-header {
     margin-bottom: 1.5rem;
 }
-
-
 
 .me ul {
     list-style-type: none;
