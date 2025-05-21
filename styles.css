@@ -180,7 +180,7 @@ body {
 
 .me ul li:hover {
     transform: translateY(-2px);
-    background: rgba(162, 89, 255, 0.3);
+    background: var(--primary-color);
 }
 
 .experience, .education-header {
