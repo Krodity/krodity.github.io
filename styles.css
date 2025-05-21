@@ -4,13 +4,13 @@
 }
 
 @font-face {
-    font-family: 'Lemonmilk';
-    src: url(misc/lemonmilk.otf) format('truetype');
+    font-family: 'lemonmilk';
+    src: url(misc/LEMONMILK-MediumItalic.otf) format('truetype');
 }
 
 :root {
-    --font-primary: 'Lemonmilk', sans-serif;
-    --font-secondary: 'Lemonmilk', sans-serif;
+    --font-primary: 'lemonmilk', sans-serif;
+    --font-secondary: 'lemonmilk', sans-serif;
     --transition-speed: 0.3s;
     --primary-color: #1a1a1a;
     --text-color: #ffffff;
