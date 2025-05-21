@@ -163,6 +163,9 @@ body {
 
 .skills {
     margin-top: 3rem;
+  
+    padding: 2rem;
+    border-radius: 10px;
 }
 
 .skill-header {
@@ -178,7 +181,7 @@ body {
 }
 
 .me ul li {
-    
+    background: var(--primary-color);
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid var(--accent-color);
