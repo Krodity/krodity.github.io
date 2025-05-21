@@ -4,12 +4,12 @@
 }
 
 :root {
-    --font-primary: 'Curive', sans-serif;
-    --font-secondary: 'Curive', sans-serif;
+    --font-primary: "Comic Sans MS", "Comic Sans", cursive;
+    --font-secondary: "Comic Sans MS", "Comic Sans", cursive;
     --transition-speed: 0.3s;
     --primary-color: #1a1a1a;
     --text-color: #ffffff;
-    --accent-color: #4b04a8;
+    --accent-color: #a259ff;
     --section-padding: 4rem 2rem;
 }
 
@@ -24,13 +24,12 @@ body {
     background: var(--primary-color);
     color: var(--text-color);
     line-height: 1.6;
+    font-family: var(--font-secondary);
 }
-
 
 .me p, .me ul {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-secondary);
 }
-
 
 /* Animation classes */
 .hidden {
@@ -172,7 +171,7 @@ body {
 }
 
 .me ul li {
-    background: rgba(75, 4, 168, 0.1);
+    background: rgba(162, 89, 255, 0.15);
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid var(--accent-color);
@@ -181,10 +180,8 @@ body {
 
 .me ul li:hover {
     transform: translateY(-2px);
-    background: rgba(75, 4, 168, 0.2);
+    background: rgba(162, 89, 255, 0.3);
 }
-
-
 
 .experience, .education-header {
     font-size: 2.5rem;
@@ -197,7 +194,6 @@ body {
     align-items: center;
 }
 
-
 .jobs li, .education-list li {
     display: block;
     justify-content: center;
@@ -207,15 +203,12 @@ body {
     text-wrap: wrap;
     padding-top: 2px;
     padding-bottom: 2px;
-
 }
-
 
 .education {
     padding-bottom: 2%;
     margin-bottom: 3%;
 }
-
 
 li {
     font-family: 'Comic Sans MS', sans-serif;
@@ -275,7 +268,6 @@ li {
         text-wrap: wrap;
         padding-top: 1%;
         padding-bottom: 1%;
-    
     }
 }
 
