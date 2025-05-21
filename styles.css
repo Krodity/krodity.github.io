@@ -181,7 +181,7 @@ body {
     background: var(--primary-color);
 }
 
-.me ul li {
+.skill-list .skill {
     background: var(--primary-color) !important;
     padding: 1rem;
     border-radius: 5px;
@@ -189,7 +189,7 @@ body {
     transition: transform var(--transition-speed);
 }
 
-.me ul li:hover {
+.skill-list .skill:hover {
     transform: translateY(-2px);
     background: var(--primary-color) !important;
 }
@@ -222,7 +222,7 @@ body {
 }
 
 li {
-    font-family: 'Comic Sans MS', sans-serif;
+    font-family: var(--font-secondary);
     font-size: 1.1rem;
 }
 
