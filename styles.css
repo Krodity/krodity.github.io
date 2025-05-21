@@ -162,6 +162,10 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.skill {
+    background-color: var(--primary-color);
+}
+
 .me ul {
     list-style-type: none;
     display: grid;
