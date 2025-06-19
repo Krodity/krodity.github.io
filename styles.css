@@ -187,15 +187,26 @@ body {
 }
 
 .dotted-skills .skill {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
     padding: 0.5rem 0.8rem;
     margin: 0 0.2rem;
     background: none !important;
-    border: none;
+    border: none !important;
     border-radius: 0;
     text-align: center;
     min-width: 120px;
-    list-style-type: disc !important;
+    position: relative;
+    list-style: none;
+}
+
+.dotted-skills .skill::before {
+    content: '\2022';
+    color: var(--accent-color, #333);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.2em;
+    position: absolute;
+    left: 0;
 }
 
 .skills {
