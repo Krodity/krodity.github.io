@@ -165,15 +165,50 @@ body {
     line-height: 1.8;
 }
 
+.dotted-skills {
+    list-style-type: disc !important;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.dotted-skills .skill-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.dotted-skills .skill {
+    font-size: 0.95rem !important;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.2rem;
+    background: none !important;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    min-width: 120px;
+    list-style-type: disc !important;
+}
+
 .skills {
-    margin-top: 3rem;
-  
-    padding: 2rem;
+    margin-top: 2rem;
+    padding: 1.2rem;
     border-radius: 10px;
+    text-align: center;
 }
 
 .skill-header {
-    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .me ul {
