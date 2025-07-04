@@ -59,7 +59,6 @@ body {
     display: flex;
     justify-content: space-around;
     z-index: 1000;
-    transition: transform var(--transition-speed) ease;
     backdrop-filter: blur(5px);
 }
 
@@ -105,15 +104,37 @@ body {
     margin-bottom: 2rem;
 }
 
-.welcome-text {
+.welcome-text1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    font-family: var(--font-primary);
-}
-
-.span1 {
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-weight: bold;
     color: var(--accent-color);
 }
+
+.welcome-text2 {
+    font-family: 'Times New Roman';
+    font-style: italic;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.459);
+    
+
+}
+.span1 {
+    color: goldenrod;
+    font-size: 1.6rem;
+ }
+
+
+.DevSpan {
+    color: rgba(255, 255, 255, 0.459);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+
 
 /* Social links */
 .links {
@@ -142,19 +163,40 @@ body {
 /* About Me section */
 .me {
     padding: var(--section-padding);
-    max-width: 800px;
+    width: 65%;
     margin: 0 auto;
+    
 }
 
 .about {
     color: var(--accent-color);
     text-align: center;
     display: block;
+    margin-bottom: 5rem;
 }
 
-.about:hover {
+.about, .experience:hover, .education-header:hover, .skill-header:hover {
     font-size: 3.5rem;
 }
+
+.about-par {
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}
+
+.about-text {
+    font-size: 1.2rem;
+    margin-bottom: 5rem;
+    font-family: 'Times New Roman';
+   
+}
+
+
 
 .me h {
     font-size: 2.5rem;
@@ -169,83 +211,62 @@ body {
     line-height: 1.8;
 }
 
-.dotted-skills {
-    list-style-type: disc !important;
-    list-style-position: inside;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 0;
-    margin: 0 auto;
-    width: 100%;
-}
-
-.dotted-skills .skill-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.7rem;
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-.dotted-skills .skill {
-    font-size: 1rem !important;
-    padding: 0.5rem 0.8rem;
-    margin: 0 0.2rem;
-    background: none !important;
-    border: none !important;
-    border-radius: 0;
-    text-align: center;
-    min-width: 120px;
-    position: relative;
-    list-style: none;
-}
-
-.dotted-skills .skill::before {
-    content: '\2022';
-    color: var(--accent-color, #333);
-    display: inline-block;
-    width: 1em;
-    margin-left: -1.2em;
-    position: absolute;
-    left: 0;
-}
-
-.skills {
-    margin-top: 2rem;
-    padding: 1.2rem;
-    border-radius: 10px;
-    text-align: center;
-}
-
 .skill-header {
     font-size: 1.3rem;
     margin-bottom: 1rem;
     text-align: center;
+    color: var(--accent-color);
 }
 
 .me ul {
     list-style-type: none;
     display: grid;
+    
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     padding-left: 0;
     background: var(--primary-color);
 }
 
-.skill-list .skill {
-    background: var(--primary-color) !important;
-    padding: 1rem;
-    border-radius: 5px;
-    border: 1px solid var(--accent-color);
-    transition: transform var(--transition-speed);
+.skill-row1, .skill-row2, .skill-row3 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
-.skill-list .skill:hover {
-    transform: translateY(-2px);
-    background: var(--primary-color) !important;
+li.skill:hover {
+    background: var(--accent-color);
+}
+
+.skill-row1 {
+    margin-right: 5rem;
+    margin-left: 4rem;
+}
+
+.skill-row2 {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.skill-row3 {
+    margin-left: 5rem;
+}
+
+li.skill {
+    width: 15rem;
+    height: auto;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--text-color);
+    transition: all var(--transition-speed);
+    display: inline-block;
+    font-size: .85rem;
 }
 
 .experience, .education-header {
@@ -338,4 +359,10 @@ li {
 
 .with-top-margin {
     margin-top: 6rem; /* Adjust as needed for desired spacing */
+}
+
+.skill-row + .skill-row {
+    margin-top: 3rem !important;
+    padding-top: 2rem !important;
+    border-top: 1px solid rgba(162, 89, 255, 0.3);
 }
