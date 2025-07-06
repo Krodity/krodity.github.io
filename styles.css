@@ -469,6 +469,18 @@ li {
     font-size: 1.1rem;
 }
 
+
+
+.under-construction {
+    background-color: var(--primary-color2);
+    
+}
+
+
+
+
+
+
 /* Media queries */
 @media (max-width: 768px) {
     #navbar {
