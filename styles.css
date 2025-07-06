@@ -13,6 +13,7 @@
     --font-secondary: 'lemonmilk', sans-serif;
     --transition-speed: 0.3s;
     --primary-color: #1a1a1a;
+    --primary-color2: #1a1a1ac9;
     --text-color: #ffffff;
     --accent-color: #a259ff;
     --section-padding: 4rem 2rem;
@@ -26,10 +27,118 @@
 }
 
 body {
-    background: var(--primary-color);
+    background: #000000;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.65) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.65) 1px, transparent 1px);
+    background-size: 50px 50px;
     color: var(--text-color);
     line-height: 1.6;
     font-family: var(--font-secondary);
+    cursor: none; /* Hide default cursor */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Matrix light streaks */
+.matrix-streak {
+    position: fixed;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    height: 1px;
+    width: 100px;
+    z-index: -1;
+    animation: matrixFlow 3s linear infinite;
+}
+
+.matrix-streak.vertical {
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    width: 1px;
+    height: 100px;
+    animation: matrixFlowVertical 3s linear infinite;
+}
+
+@keyframes matrixFlow {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(calc(100vw + 100px));
+        opacity: 0;
+    }
+}
+
+@keyframes matrixFlowVertical {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(calc(100vh + 100px));
+        opacity: 0;
+    }
+}
+
+/* Click ripple effect */
+.ripple {
+    position: fixed;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    animation: rippleExpand 1s ease-out forwards;
+    transform-origin: center;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rippleExpand {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+        border-width: 2px;
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+/* Custom cursor */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgba(162, 89, 255, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference;
+}
+
+.cursor.hover {
+    transform: scale(2);
+    background: radial-gradient(circle, rgba(162, 89, 255, 0.8) 0%, rgba(162, 89, 255, 0.4) 30%, rgba(162, 89, 255, 0.2) 65%, transparent 100%);
+    box-shadow: 0 0 10px rgba(162, 89, 255, 0.6), 0 0 20px rgba(162, 89, 255, 0.4), 0 0 30px rgba(162, 89, 255, 0.2);
 }
 
 .me p, .me ul {
@@ -62,6 +171,29 @@ body {
     backdrop-filter: blur(5px);
 }
 
+.exp {
+    background-color: var(--primary-color2);
+    width: 60%;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 0rem;
+    
+    
+}
+
+
+.education {
+    background-color: var(--primary-color2);
+    width: 60%;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+
+
 #navbar a {
     color: var(--text-color);
     text-decoration: none;
@@ -75,13 +207,25 @@ body {
 
 /* Welcome section */
 #welcome-section {
-    min-height: 100vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: var(--section-padding);
+}
+
+#spacer {
+    height: 100px;
+    width: 100%;
+}
+
+.links {
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .selfie {
@@ -175,8 +319,8 @@ body {
     margin-bottom: 5rem;
 }
 
-.about, .experience:hover, .education-header:hover, .skill-header:hover {
-    font-size: 3.5rem;
+.about:hover, .experience:hover, .education-header:hover, .skill-header:hover {
+    font-size: 3rem;
 }
 
 .about-par {
@@ -196,6 +340,25 @@ body {
    
 }
 
+#welcome-section {
+    background-color: var(--primary-color2);
+    width:50%;
+    border-radius: 25px;
+    height: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.me {
+   background-color: var(--primary-color2);
+   width: 80%;
+   border-radius: 25px;
+   ;
+
+}
 
 
 .me h {
@@ -220,20 +383,23 @@ body {
 
 .me ul {
     list-style-type: none;
-    display: grid;
-    
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
     padding-left: 0;
-    background: var(--primary-color);
+    background: var(--primary-color2);
 }
 
 .skill-row1, .skill-row2, .skill-row3 {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
     flex-wrap: wrap;
+    width: 100%;
+    background: transparent;
 }
 
 li.skill:hover {
@@ -241,17 +407,19 @@ li.skill:hover {
 }
 
 .skill-row1 {
-    margin-right: 5rem;
-    margin-left: 4rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .skill-row2 {
-    margin-right: 5rem;
-    margin-left: 5rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .skill-row3 {
-    margin-left: 5rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: transparent;
 }
 
 li.skill {
@@ -262,7 +430,7 @@ li.skill {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
     text-align: center;
-    background: var(--primary-color);
+    background: none;
     color: var(--text-color);
     transition: all var(--transition-speed);
     display: inline-block;
